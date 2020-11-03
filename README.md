@@ -4,8 +4,8 @@ This is a PHP Blogging System created using PHP and MySQL as the database engine
 
 ## Instructions to run
 
-*Create a folder PHPBlogSystem in your htdocs folder (if you are using XAMPP).
+<li>Create a folder PHPBlogSystem in your htdocs folder (if you are using XAMPP).</li>
 
-*Clone the repository to the PHPBlogSystem folder and run XAMPP. 
+<li>Clone the repository to the PHPBlogSystem folder and run XAMPP.</li>
 
-*Go to localhost/PHPBlogSystem
+<li>Go to localhost/PHPBlogSystem.</li>
