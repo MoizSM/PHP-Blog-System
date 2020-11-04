@@ -26,6 +26,7 @@ include('./config/connection.php');
     </nav>
 
     <ul id="slide-out" class="sidenav">
+        <img class="materialboxed" width="200" src="assets/images/img.png">
         <li><a href="profile.php"><?php echo $_SESSION['username'] ?></a></li>
         <li><a href="homepage.php">Display All Posts</a></li>
         <li><a href="handlers/logoutHandler.php">Logout</a></li>
