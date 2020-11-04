@@ -10,7 +10,7 @@ $rec = $blogs->displayPosts();
 
 <body>
 
-    <h3 class="center">YOUR HOMEPAGE - <?php echo $user->name(); ?></h3>
+    <h3 style="font-size: 20px;" class="center">YOUR HOMEPAGE - <?php echo $user->name(); ?></h3>
 
     <div class="row">
         <?php foreach ($rec as $item) : ?>

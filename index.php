@@ -22,7 +22,7 @@ include('./handlers/loginHandler.php');
 
     
     <div class="accountForm">
-        <h1>Welcome to PHP Blogger</h1>
+        <h4 style="color: #FFF;">Welcome to PHP Blogger</h4>
 
         <!-- Modal Trigger -->
         <a class="btn modal-trigger account" href="#modal1">Register</a>

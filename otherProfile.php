@@ -12,7 +12,7 @@ $singleuserblogs = $blogs->displaySingleUserPosts($_GET['q']);
 ?>
 
 <body>
-    <h2 style="padding-left: 20px;"> Profile: <?php echo $singleuserblogs[0]['first_name'] ." ". $singleuserblogs[0]['last_name']; ?></h2>
+    <h2 class='otherProfileHeader' style="padding-left: 20px;"> Profile: <?php echo $singleuserblogs[0]['first_name'] ." ". $singleuserblogs[0]['last_name']; ?></h2>
     <?php foreach ($singleuserblogs as $item) : ?>
         <ul class="collection with-header">
             <li class="collection-header">
