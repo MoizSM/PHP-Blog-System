@@ -8,7 +8,6 @@ if ($_SESSION['username'] == $_GET['q']) {
 
 $blogs = new AllBlogs($conn);
 $singleuserblogs = $blogs->displaySingleUserPosts($_GET['q']);
-// foreach($singleuserblogs as $item)
 
 ?>
 

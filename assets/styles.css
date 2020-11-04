@@ -36,3 +36,17 @@ h1{
     padding-left: 20px !important;
 }
 
+.materialboxed{
+  border-radius: 70%;
+  height: 100px;
+  width: 100px;
+  margin: 5% auto;
+  border: 1px solid grey;
+  object-fit: cover;
+}
+
+.userDetail{
+  margin-top: 5%;
+  border: 1px solid black;
+}
+

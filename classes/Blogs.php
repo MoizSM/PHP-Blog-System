@@ -1,12 +1,4 @@
 <?php 
-    // class UserBlogs{
-    //     private $conn;
-    //     private $user;
-    //     public function __construct($conn, $user){
-    //         $this->conn = $conn;
-    //     }
-    // }
-
     class AllBlogs{
         private $conn;
 

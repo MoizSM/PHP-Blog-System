@@ -8,7 +8,9 @@ $currentuser = new Users($conn, $user);
 
 <body>
     <div class="row">
-        <div class="col s12 m6">
+
+        <div class="userDetail col push-l3 l6 s12 push-m3 m6">
+            <img class="materialboxed" width="200" src="assets/images/img.png">
             <div class="card blue-grey darken-1">
                 <div class="card-content white-text">
                     <span class="card-title"><?php echo $currentuser->name(); ?></span>
@@ -31,5 +33,7 @@ $currentuser = new Users($conn, $user);
             <input type='submit' name='submit' class='btn' value='Create Post' />
         </form>
     </div>
-    <h4 style="color: green"><?php if(isset($msg)){echo $msg;} ?></h4>
+    <h4 style="color: green"><?php if (isset($msg)) {
+                                    echo $msg;
+                                } ?></h4>
 </body>
