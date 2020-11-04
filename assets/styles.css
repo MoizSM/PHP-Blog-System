@@ -58,6 +58,36 @@ nav {
   font-size: 20px;
 }
 
+.footer{
+  margin-top: 40px;
+  background: linear-gradient(
+    173deg,
+    rgba(5, 78, 166, 1) 43%,
+    rgba(0, 212, 255, 1) 91%
+  );
+  color: #fff;
+  height: 12vh;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social {
+  width: 10%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.social li a i{
+  color: #FFF;
+}
+
+.social li a i:hover{
+  opacity: 0.4;
+  transition: 0.3s;
+}
+
 /* MEDIA QUERIES */
 @media only screen and (max-width: 600px) {
   .blogForm{

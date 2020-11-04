@@ -29,3 +29,7 @@ $rec = $blogs->displayPosts();
         <?php endforeach ?>
     </div>
 </body>
+
+<?php
+    include('./common/Footer.php')
+?>

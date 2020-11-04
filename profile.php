@@ -71,5 +71,8 @@ $singleblogs = $blogs->displaySingleUserPosts($user);
             $('.materialboxed').materialbox();
         });
     </script>
-
 </body>
+
+<?php
+    include('./common/Footer.php');
+?>
