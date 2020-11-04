@@ -35,11 +35,11 @@ $singleblogs = $blogs->displaySingleUserPosts($user);
         <form class='center' action="<?php $_SERVER['PHP_SELF'] ?>" method="POST" class='col l8'>
             <div class="input-field">
                 <label for="title">Title</label>
-                <input type="text" name="title" id="title">
+                <input type="text" name="title" id="title" required>
             </div>
             <div class="input-field">
                 <label for="body">Body</label>
-                <input type="text" name="body" id="body">
+                <input type="text" name="body" id="body" required>
             </div>
             <input type='submit' name='submit' class='btn' value='Create Post' />
         </form>
