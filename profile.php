@@ -3,6 +3,8 @@ include('./common/Header.php');
 include('./classes/Users.php');
 include('./classes/Blogs.php');
 include('./handlers/blogHandler.php');
+include('./handlers/deleteblogHandler.php');
+
 $user = $_SESSION['username'];
 $currentuser = new Users($conn, $user);
 
@@ -62,6 +64,10 @@ $singleblogs = $blogs->displaySingleUserPosts($user);
                 <li class="collection-item">
                     <div>Date Created: <?php echo $item['date_created'] ?></div>
                 </li>
+                <form action="profile.php" method="GET">
+                    <input type="hidden" name='delete' value='<?php echo $item['id'] ?>'>
+                    <button class='btn right' type='submit'>DELETE</button>
+                </form>
             </ul>
         <?php endforeach ?>
     </div>

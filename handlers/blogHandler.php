@@ -14,3 +14,4 @@
             $msg = 'POST ADDED SUCCESFULLY';
         }
     }
+?>
