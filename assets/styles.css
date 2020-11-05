@@ -1,3 +1,7 @@
+body{
+  height: 100vh;
+}
+
 nav {
   background: linear-gradient(
     173deg,
@@ -59,7 +63,7 @@ nav {
 }
 
 .footer{
-  margin-top: 40px;
+  margin-top: 80px;
   background: linear-gradient(
     173deg,
     rgba(5, 78, 166, 1) 43%,
@@ -71,6 +75,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-shrink: 0;
 }
 
 .social {
@@ -86,6 +91,10 @@ nav {
 .social li a i:hover{
   opacity: 0.4;
   transition: 0.3s;
+}
+
+.allBlogs{
+  min-height: 55vh;
 }
 
 /* MEDIA QUERIES */

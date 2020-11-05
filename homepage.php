@@ -12,7 +12,7 @@ $rec = $blogs->displayPosts();
 
     <h3 style="font-size: 20px;" class="center">YOUR HOMEPAGE - <?php echo $user->name(); ?></h3>
 
-    <div class="row">
+    <div class="allBlogs row">
         <?php foreach ($rec as $item) : ?>
             <div style="padding: 20px;" class="col l6 s12 m6">
                 <div class="card blue-grey darken-1">
