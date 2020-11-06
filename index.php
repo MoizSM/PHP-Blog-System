@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(isset($_SESSION['username'])){
+if (isset($_SESSION['username'])) {
     header('Location: profile.php');
 }
 include('./common/libraries.php');
@@ -19,9 +19,16 @@ include('./handlers/loginHandler.php');
 </head>
 
 <body>
-
-    
     <div class="accountForm">
+
+        <?php if ($reg_errors) : ?>
+            <div style="border: 1px solid red; padding: 20px;">
+                <?php foreach ($reg_errors as $error) : ?>
+                    <p style="color: red; font-weight: 600;">*<?php echo $error ?></p>
+                <?php endforeach ?>
+            </div>
+        <?php endif ?>
+
         <h4 style="color: #FFF;">Welcome to PHP Blogger</h4>
 
         <!-- Modal Trigger -->
@@ -80,8 +87,12 @@ include('./handlers/loginHandler.php');
             </div>
         </div>
 
-        <h5 style="color: #1abc9c;"><?php if(isset($sucess_msg)){echo $sucess_msg;} ?></h5>
-        <p style="color: red;"><?php if(isset($msg)){echo $msg;} ?></p>
+        <h5 style="color: #1abc9c;"><?php if (isset($sucess_msg)) {
+                                        echo $sucess_msg;
+                                    } ?></h5>
+        <p style="color: red;"><?php if (isset($msg)) {
+                                    echo $msg;
+                                } ?></p>
     </div>
 
     <script>

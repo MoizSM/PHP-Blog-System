@@ -53,7 +53,5 @@ if (isset($_POST['submit'])) {
             print_r(mysqli_stmt_get_result($stmt));
             $sucess_msg = 'ACCOUNT HAS BEEN CREATED.';
         }
-    }else{
-        print_r($reg_errors);
     }
 }
