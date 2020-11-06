@@ -45,9 +45,7 @@ $singleblogs = $blogs->displaySingleUserPosts($user);
             </div>
             <input type='submit' name='submit' class='btn' value='Create Post' />
         </form>
-        <h4 style="color: green; text-align: center"><?php if (isset($msg)) {
-                                                            echo $msg;
-                                                        } ?></h4>
+        <h4 style="color: green; text-align: center"><?php if(isset($_COOKIE['msg'])){echo $_COOKIE['msg'];} ?></h4>
     </div>
 
     <div class="divider"></div>
@@ -73,8 +71,10 @@ $singleblogs = $blogs->displaySingleUserPosts($user);
                 </ul>
             <?php endforeach ?>
         </div>
-            <?php else: ?>
-                <div class="container"><h5>You do not have any posts. Why don't you create one?</h5></div>
+    <?php else : ?>
+        <div class="container">
+            <h5>You do not have any posts. Why don't you create one?</h5>
+        </div>
     <?php endif ?>
 
     <script>

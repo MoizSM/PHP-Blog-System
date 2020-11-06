@@ -12,6 +12,8 @@
             $query = "INSERT INTO blogs(title, body, userId) values ('$title','$body',$id)";
             mysqli_query($conn, $query);
             $msg = 'POST ADDED SUCCESFULLY';
+            setcookie('msg', $msg, time() + 1, '/');
+            header('Location: profile.php');
         }
     }
 ?>
