@@ -108,4 +108,8 @@ nav {
     text-align: center;
     font-size: 20px;
   }
+
+  .social{
+    width: 30%;
+  }
 }
