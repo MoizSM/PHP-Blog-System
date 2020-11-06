@@ -51,26 +51,31 @@ $singleblogs = $blogs->displaySingleUserPosts($user);
     </div>
 
     <div class="divider"></div>
-    <div class="userposts container">
-        <h4>All Your Posts</h4>
-        <?php foreach ($singleblogs as $item) : ?>
-            <ul class="collection with-header">
-                <li class="collection-header">
-                    <h4><?php echo $item['title'] ?></h4>
-                </li>
-                <li class="collection-item">
-                    <div><?php echo $item['body'] ?></div>
-                </li>
-                <li class="collection-item">
-                    <div>Date Created: <?php echo $item['date_created'] ?></div>
-                </li>
-                <form action="profile.php" method="GET">
-                    <input type="hidden" name='delete' value='<?php echo $item['id'] ?>'>
-                    <button class='btn right' type='submit'>DELETE</button>
-                </form>
-            </ul>
-        <?php endforeach ?>
-    </div>
+
+    <?php if ($singleblogs) : ?>
+        <div class="userposts container">
+            <h4>All Your Posts</h4>
+            <?php foreach ($singleblogs as $item) : ?>
+                <ul class="collection with-header">
+                    <li class="collection-header">
+                        <h4><?php echo $item['title'] ?></h4>
+                    </li>
+                    <li class="collection-item">
+                        <div><?php echo $item['body'] ?></div>
+                    </li>
+                    <li class="collection-item">
+                        <div>Date Created: <?php echo $item['date_created'] ?></div>
+                    </li>
+                    <form action="profile.php" method="GET">
+                        <input type="hidden" name='delete' value='<?php echo $item['id'] ?>'>
+                        <button class='btn right' type='submit'>DELETE</button>
+                    </form>
+                </ul>
+            <?php endforeach ?>
+        </div>
+            <?php else: ?>
+                <div class="container"><h5>You do not have any posts. Why don't you create one?</h5></div>
+    <?php endif ?>
 
     <script>
         $(document).ready(function() {
@@ -80,5 +85,5 @@ $singleblogs = $blogs->displaySingleUserPosts($user);
 </body>
 
 <?php
-    include('./common/Footer.php');
+include('./common/Footer.php');
 ?>
