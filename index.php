@@ -30,69 +30,19 @@ include('./handlers/loginHandler.php');
         <?php endif ?>
 
         <h4 style="color: #FFF;">Welcome to PHP Blogger</h4>
+        
+        <!-- Registeration Form -->
+        <?php include('./Forms/registrationForm.php'); ?>
+        <!-- Login Form -->
+        <?php include('./Forms/loginForm.php'); ?>
+    </div>
 
-        <!-- Modal Trigger -->
-        <a class="btn modal-trigger account" href="#modal1">Register</a>
-
-        <!-- Modal Structure -->
-        <div id="modal1" class="modal">
-            <div class="modal-content">
-                <h4>Create A New Account</h4>
-                <form action="index.php" method="POST">
-                    <div class="input-field">
-                        <label for="fName">First Name</label>
-                        <input type="text" name="fName" id="fName">
-                    </div>
-                    <div class="input-field">
-                        <label for="lName">Last Name</label>
-                        <input type="text" name="lName" id="lName">
-                    </div>
-                    <div class="input-field">
-                        <label for="email">Email</label>
-                        <input type="email" name="email" id="email">
-                    </div>
-                    <div class="input-field">
-                        <label for="password">Password</label>
-                        <input type="password" name="password" id="password">
-                    </div>
-                    <div class="input-field">
-                        <input type="submit" name="submit" id="submit" value="CREATE ACCOUNT">
-                    </div>
-                </form>
-            </div>
-        </div>
-
-
-
-        <!-- Modal Trigger -->
-        <a class="btn modal-trigger account" href="#modal2">Login</a>
-
-        <!-- Modal Structure -->
-        <div id="modal2" class="modal">
-            <div class="modal-content">
-                <h4>Sign In</h4>
-                <form action="index.php" method="POST">
-                    <div class="input-field">
-                        <label for="email">Email</label>
-                        <input type="email" name="login_email" id="email">
-                    </div>
-                    <div class="input-field">
-                        <label for="password">Password</label>
-                        <input type="password" name="login_password" id="password">
-                    </div>
-                    <div class="input-field">
-                        <input type="submit" name="login_submit" id="submit" value="SIGN IN">
-                    </div>
-                </form>
-            </div>
-        </div>
-
-        <h5 style="color: #1abc9c;"><?php if (isset($sucess_msg)) {
-                                        echo $sucess_msg;
-                                    } ?></h5>
-        <p style="color: red;"><?php if (isset($msg)) {
-                                    echo $msg;
-                                } ?></p>
+    <h5 style="color: #1abc9c;"><?php if (isset($sucess_msg)) {
+                                    echo $sucess_msg;
+                                } ?></h5>
+    <p style="color: red;"><?php if (isset($msg)) {
+                                echo $msg;
+                            } ?></p>
     </div>
 
     <script>
