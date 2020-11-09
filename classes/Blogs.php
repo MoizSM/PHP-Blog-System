@@ -15,15 +15,7 @@
         }
 
         public function displaySingleUserPosts($uname){
-<<<<<<< HEAD
-<<<<<<< HEAD
             $query = "SELECT blogs.id, title, body, first_name, last_name, username, blogs.date_created, displayType FROM blogs INNER JOIN users ON users.id = userId WHERE username = '$uname' AND displayType = 1";
-=======
-            $query = "SELECT blogs.id, title, body, first_name, last_name, username, blogs.date_created FROM blogs INNER JOIN users ON users.id = userId WHERE username = '$uname'";
->>>>>>> parent of 14a91ac (Added display type functionality to blogs)
-=======
-            $query = "SELECT blogs.id, title, body, first_name, last_name, username, blogs.date_created, displayType FROM blogs INNER JOIN users ON users.id = userId WHERE username = '$uname' AND displayType = 1";
->>>>>>> d8ab328096714dc6bd80db114e0246ad08b81e62
             $res = mysqli_query($this->conn, $query);
             if(!$res){
               echo mysqli_error($this->conn);
