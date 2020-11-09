@@ -15,7 +15,7 @@
         }
 
         public function displaySingleUserPosts($uname){
-            $query = "SELECT blogs.id, title, body, first_name, last_name, username, blogs.date_created, displayType FROM blogs INNER JOIN users ON users.id = userId WHERE username = '$uname' AND displayType = 1";
+            $query = "SELECT blogs.id, title, body, first_name, last_name, username, blogs.date_created, displayType FROM blogs INNER JOIN users ON users.id = userId WHERE username = '$uname'";
             $res = mysqli_query($this->conn, $query);
             if(!$res){
               echo mysqli_error($this->conn);
