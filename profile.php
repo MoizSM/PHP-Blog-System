@@ -32,21 +32,7 @@ $singleblogs = $blogs->displaySingleUserPosts($user);
         </div>
     </div>
 
-    <div class="blogForm row">
-        <h4 class='center'>Add New Post</h4>
-        <form class='center' action="<?php $_SERVER['PHP_SELF'] ?>" method="POST" class='col l8'>
-            <div class="input-field">
-                <label for="title">Title</label>
-                <input type="text" name="title" id="title" required>
-            </div>
-            <div class="input-field">
-                <label for="body">Body</label>
-                <input type="text" name="body" id="body" required>
-            </div>
-            <input type='submit' name='submit' class='btn' value='Create Post' />
-        </form>
-        <h4 style="color: green; text-align: center"><?php if(isset($_COOKIE['msg'])){echo $_COOKIE['msg'];} ?></h4>
-    </div>
+    <?php include('./Forms/addBlogForm.php'); ?>
 
     <div class="divider"></div>
 
@@ -64,6 +50,9 @@ $singleblogs = $blogs->displaySingleUserPosts($user);
                     <li class="collection-item">
                         <div>Date Created: <?php echo $item['date_created'] ?></div>
                     </li>
+                    <li class="collection-item">
+                        <div>Display Type: <?php echo $item['displayType'] ? 'Public' : 'Private' ?></div>
+                    </li>
                     <form action="profile.php" method="GET">
                         <input type="hidden" name='delete' value='<?php echo $item['id'] ?>'>
                         <button class='btn right' type='submit'>DELETE</button>
@@ -80,6 +69,7 @@ $singleblogs = $blogs->displaySingleUserPosts($user);
     <script>
         $(document).ready(function() {
             $('.materialboxed').materialbox();
+            $('select').formSelect();
         });
     </script>
 </body>
