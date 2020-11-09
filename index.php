@@ -39,7 +39,7 @@ include('./handlers/loginHandler.php');
 
     <h5 style="color: #1abc9c;"><?php if (isset($sucess_msg)) {
                                     echo $sucess_msg;
-                                } ?></h5>
+                                } ?></h5>`
     <p style="color: red;"><?php if (isset($msg)) {
                                 echo $msg;
                             } ?></p>
