@@ -22,6 +22,7 @@ $singleblogs = $blogs->displaySingleUserPosts($user);
     <div class="row">
         <div class="userDetail col push-l3 l6 s12 push-m3 m6">
             <img class="materialboxed" width="200" src="assets/images/img.png">
+            <?php include('./Forms/uploadImage.php') ?>
             <div class="card blue-grey darken-1">
                 <div class="card-content white-text">
                     <span class="card-title"><?php echo $currentuser->name(); ?></span>
