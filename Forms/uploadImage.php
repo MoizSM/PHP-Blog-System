@@ -11,15 +11,14 @@
 </head>
 
 <body>
-    <form action="#">
+    <form action="#" style="display: flex; justify-content: center;">
         <div class="file-field input-field">
             <div class="btn">
-                <span>Uplaod New Image</span>
+                <span>Upload New Image</span>
                 <input type="file">
             </div>
-            <div class="file-path-wrapper">
-                <input class="file-path validate" type="text">
-            </div>
+            <div class="section"></div>
+            <div class="section"></div>
         </div>
     </form>
 </body>
